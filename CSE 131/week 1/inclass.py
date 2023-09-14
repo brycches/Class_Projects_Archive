@@ -8,9 +8,9 @@ def problem_1():
     lastname = input("what is your last name? ")
     gender = input("what is your gender? (m/f) ")
     if gender == "m":
-        title = "mr."
+        title = "mr. "
     else:
-        title ="mrs."
+        title ="mrs. "
     return (f"{title} {firstname} {lastname}")
 
 
