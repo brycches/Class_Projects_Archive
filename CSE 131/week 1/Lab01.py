@@ -5,9 +5,11 @@
 # 3. Assignment Description:
 #      Play the game of Tic-Tac-Toe
 # 4. What was the hardest part? Be as specific as possible.
-#      -a paragraph or two about how the assignment went for you-
+#      The hardest part for me was probably just shaking off the cobwebs and
+#      sitting down to code the program. getting the motivation and losing the brain 
+#      fog enough to actually make it work
 # 5. How long did it take for you to complete the assignment?
-#      -total time in hours including reading the assignment and submitting the program-
+#      around 5 hours
 
 import json
 
@@ -16,7 +18,7 @@ import json
 X = 'X'
 O = 'O'
 BLANK = ' '
-
+board = []
 # A blank Tic-Tac-Toe board. We should not need to change this board;
 # it is only used to reset the board to blank. This should be the format
 # of the code in the JSON file.
@@ -184,7 +186,6 @@ def main ():
     
     done = True
     while done != False:
-        print(f'board - {board}')
         display_board(board)
         done = play_game(board)
         if done == False:
@@ -195,11 +196,9 @@ def main ():
             game_done(board, message=True)
             again = ""
             again = input('would you like to play again? y/n ')
-            print(f'again = {again}')
+            
             if again == 'y':
-                print(again)
-                board = blank_board["board"]
-                print(board)
+                board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
                 done = True
                 
             else:
